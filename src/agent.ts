@@ -8,7 +8,16 @@ import { logMessage, showLoader } from './ui'
 export const runAgent = async ({
   turns = 10,
   userMessage,
-  tools = [],
+  tools = [
+    {
+      name: 'fetch_bible_citation',
+      parameters: z.object({
+        query: z.string(),
+        translation: z.string().optional(),
+      }),
+    },
+    { name: 'generate_image', parameters: z.object({ prompt: z.string() }) },
+  ],
 }: {
   turns?: number
   userMessage: string
