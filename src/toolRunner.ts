@@ -14,6 +14,7 @@ export const runTool = async (
   switch (toolCall.function.name) {
     case 'generate_image':
       const image = await generateImage(input)
+      console.log('Returned Image URL:', image)
       return image
 
     case 'dad_joke':

@@ -27,8 +27,11 @@ export const generateImage: ToolFn<Args, string> = async ({
     n: 1,
     size: '1024x1024',
   })
+  console.log('API Response:', response)
 
   const imageUrl = response.data[0].url!
+
+  console.log('Generated Image URL:', imageUrl)
 
   return imageUrl
 }

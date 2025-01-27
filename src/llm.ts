@@ -5,7 +5,7 @@ import { openai } from './ai'
 import { systemPrompt } from './systemPrompt'
 
 export const runLLM = async ({
-  model = 'gpt-4o-mini',
+  model = 'gpt-3.5-turbo',
   messages,
   temperature = 0.1,
   tools,
