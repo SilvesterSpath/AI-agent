@@ -177,3 +177,5 @@ dist
 
 db.json 
 *.txt
+_bun.lockb_
+index copy.ts
